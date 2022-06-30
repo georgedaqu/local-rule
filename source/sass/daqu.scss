@@ -1,0 +1,11 @@
+@import "bourbon";
+@import "../../node_modules/select2/dist/css/select2.css";
+
+@import "base/root";
+
+// @import "layout/parts/cart";
+@import "layout/parts/profile";
+// @import "layout/parts/checkout";
+
+@import "components/info";
+@import "components/form/selector";

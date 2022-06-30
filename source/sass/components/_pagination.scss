@@ -1,0 +1,104 @@
+nav.woocommerce-pagination,
+div.pagination {
+	margin: 90px 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@media(max-width: 768px){
+		justify-content: center;
+	}
+	ul {
+		@extend .no-list;
+		display: flex;
+		gap: 5px;
+		justify-content: center;
+		align-items: center;
+		li {
+			a.page-numbers,
+			span.page-numbers {
+				@extend .flex;
+				@extend .pagination_text;
+				position: relative;
+				width: 34px;
+				height: 34px;
+				transition: .5s;
+			}
+			a.page-numbers{
+				color: $color-black;
+				&:before{
+					position: absolute;
+					content: '';
+					width: 0;
+					height: 2px;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: 0;
+					background-color: $color-primary-200;
+					transition: all .4s cubic-bezier(0,.208,.73,1.075);
+				}
+				&:hover{
+					color: $color-primary-200;
+					&::before{
+						width: 50%;
+					}
+				}
+				&.prev,
+				&.next{
+					margin: 0 5px;
+					width: 50px;
+					height: 50px;
+					background-color: $color-primary-200;
+					border-radius: 50%;
+					&::before{
+						display: none;
+					}
+					&::after{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%,-50%);
+						color:  $color-primary-200;
+					}
+				}
+				&.prev{
+					&::after{
+						@extend .arrows_style;
+						content: '\f053';
+					}
+				}
+				&.next{
+					&::after{
+						@extend .arrows_style;
+						content: '\f054';
+					}
+				}
+			}
+			span.page-numbers{
+				&.current{
+					color: $color-primary-200;
+					&::before{
+						position: absolute;
+						content: '';
+						width: 50%;
+						height: 2px;
+						left: 50%;
+						bottom: 0;
+						transform: translateX(-50%);
+						background-color: $color-primary-200;
+					}
+				}
+			}
+		}
+	}
+}
+
+.pagination_text {
+	font-size: var(--font-size-xl);
+	font-weight: 400;
+	line-height: 1;
+}
+
+.arrows_style {
+	font-family:'Font Awesome 6 Pro';
+	color: $color-white;
+}

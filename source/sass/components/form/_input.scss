@@ -1,0 +1,59 @@
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+	width: 100%;
+	height: var(--form-height);
+	padding: 0 var(--input-padding-x);
+	border: var(--form-border);
+	border-radius: var(--form-border-radius);
+	font-weight: 300;
+	&:focus {
+	}
+	&:disabled {
+		border-color: transparent;
+		&::placeholder {
+		}
+	}
+	&.small {
+		height: var(--form-height-small);
+		font-size: var(--font-size-xs);
+	}
+	&.white {
+		color: $color-white;
+		border-color: $color-white;
+		&::placeholder {
+			color: $color-white;
+		}
+	}
+	&.transparent {
+		color: $color-white;
+		background-color: rgba($color-primary-50, 0.15);
+		&::placeholder {
+			color: $color-white;
+		}
+		&:focus {
+			background-color: rgba($color-primary-50, 0.2);
+		}
+	}
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+textarea {
+	height: var(--textarea-height);
+}

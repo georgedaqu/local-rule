@@ -1,0 +1,132 @@
+// Color
+$color-black: #000000;
+$color-white: #ffffff;
+$color-input-border: #ddd;
+$color-gray-900: #0b0b0c;
+$color-gray-800: #191a1c;
+$color-gray-700: #242426;
+$color-gray-600: #3f4044;
+$color-gray-500: #3f4965;
+$color-gray-400: #7f828c;
+$color-gray-300: #8d8f99;
+$color-gray-200: #a8acb8;
+$color-gray-100: #ced0d8;
+$color-gray-50: #e7e9ef;
+$color-gray-25: #f4f5f9;
+$color-gray-20: #fafafa;
+$color-gray-15: #f7f7f7;
+$color-info-200: #4172c5;
+$color-info-100: #4787f3;
+$color-info-50: #91b6f4;
+$color-info-25: #f5f9ff;
+$color-error-200: #d92d20;
+$color-error-100: #f93232;
+$color-error-50: #ffa4a3;
+$color-error-25: #ffe6e3;
+$color-warning-200: #d6900a;
+$color-warning-100: #ffb82e;
+$color-warning-50: #ffe19a;
+$color-warning-25: #fff7e3;
+$color-success-200: #109356;
+$color-success-100: #12b76a;
+$color-success-50: #a6f4c5;
+$color-success-25: #f6fef9;
+$color-overlay: #494949;
+$color-overlay2: #a6a6a6;
+$color-overlay3: #515151;
+$color-input-email: #b9b9b9;
+$color-support: #898989;
+$color-filter-border: #ededed;
+
+$color-primary-200: #1c4236;
+$color-primary-150: #abbdc4;
+$color-primary-100: #63937c;
+$color-primary-50: #ccd4c4;
+
+$color-secondary-200: #d9ba59;
+
+$color-facebook: #1877f2;
+$color-instagram: #845ddb;
+$color-twitter: #00acee;
+$color-youtube: #c4302b;
+$color-linkedin: #0077b5;
+$color-whatsapp: #25d366;
+$color-viber: #675ca8;
+$color-social-border: #9b9b9b;
+
+$color-pdf: #bd0f17;
+$color-word: #1b56b4;
+$color-excel: #18753f;
+$color-powerpoint: #bc3922;
+$color-archive: #fdd977;
+
+:root {
+	// Font family
+	--font-family-primary: "whyte";
+	--font-family-secondary: "whyte";
+	// Font size
+	--font-size-2xs: 10px;
+	--font-size-xs: 12px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-lg: 18px;
+	--font-size-xl: 20px;
+	--font-size-1xl: 22px;
+	--font-size-1-2xl: 24px;
+	--font-size-1-6xl: 26px;
+	--font-size-1-5xl: 28px;
+	--font-size-2xl: 32px;
+	--font-size-2-4xl: 34px;
+	--font-size-2-8xl: 38px;
+	--font-size-3xl: 40px;
+	--font-size-3-2xl: 42px;
+	--font-size-3-4xl: 44px;
+	--font-size-3-6xl: 46px;
+	--font-size-4xl: 48px;
+	--font-size-5xl: 52px;
+	--font-size-6xl: 54px;
+	--font-size-7xl: 56px;
+	--font-size-8xl: 58px;
+	--font-size-9xl: 64px;
+	--font-size-10xl: 72px;
+
+	// Line height
+	--line-height-base: 100%;
+	--line-height-xs: 110%;
+	--line-height-sm: 120%;
+	--line-height-md: 140%;
+	// Box Shadow
+	--box-shadow-sm: 0px 10px 20px #{$color-black}05;
+	--box-shadow-md: 0px 10px 15px -5px #{$color-black}10,
+		0px 5px 5px #{$color-black}05;
+	--box-shadow-lg: 0px 25px 50px -10px #{$color-black}20;
+	--box-shadow-xl: 0px 30px 65px -10px #{$color-black}15;
+	// Border radius
+	--border-radius-sm: 5px;
+	--border-radius-md: 10px;
+	--border-radius-lg: 20px;
+	--border-radius-xl: 25px;
+	--border-radius-2xl: 30px;
+	--border-radius-half: 50%;
+	// Form
+	--form-height-smallest: 30px;
+	--form-height-small: 40px;
+	--form-height: 50px;
+	--form-height-big: 60px;
+	--form-border: 1px solid #{$color-primary-200};
+	--form-border-radius: var(--border-radius-xl);
+	--form-border-radius-small: var(--border-radius-lg);
+	--form-border-radius-big: var(--border-radius-2xl);
+	//-- Button
+	--button-padding-x: 40px;
+	--button-padding-x-small: 20px;
+	--button-padding-x-big: 50px;
+	--button-padding-alt: 25px;
+	--button-icon-margin: 10px;
+	--button-outline-size: 1px;
+	--button-outline-offset: 2px;
+	//-- Input
+	--input-padding-x: 20px;
+	//-- Textarea
+	--textarea-height: 150px;
+}

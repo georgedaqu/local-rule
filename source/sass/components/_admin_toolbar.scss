@@ -1,0 +1,18 @@
+div.admin_toolbar {
+	display: flex;
+	height: 35px;
+	background-color: $color-primary-200;
+	a.admin_link {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0 15px 0 10px;
+		color: $color-white;
+		&:hover {
+			background-color: $color-gray-400;
+		}
+		em {
+			margin-right: 10px;
+		}
+	}
+}

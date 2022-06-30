@@ -1,0 +1,60 @@
+div.content {
+	div.accordion_wrap {
+		h3 {
+			margin-bottom: 10px;
+			color: $color-primary-200;
+			font-size: 18px;
+			font-family: var(--font-family-primary);
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		ul {
+			@extend .no-list;
+			margin-bottom: 20px;
+			li {
+				div.accordion_question {
+					a {
+						display: flex;
+						color: $color-primary-200;
+						strong {
+							flex: 1;
+							font-weight: 700;
+						}
+						span {
+							width: 15px;
+							height: 15px;
+							&:before,
+							&:after {
+								@extend .trans-4;
+								display: block;
+								position: absolute;
+								content: '';
+								width: 100%;
+								height: 1px;
+								left: 0;
+								top: 10px;
+								background-color: $color-primary-200;
+							}
+							&:after {
+								transform: rotate(90deg);
+							}
+						}
+					}
+					&.open {
+						a {
+							span {
+								&:after {
+									transform: rotate(0deg);
+								}
+							}
+						}
+					}
+				}
+				div.accordion_content {
+					display: none;
+					transition: none;
+				}
+			}
+		}
+	}
+}

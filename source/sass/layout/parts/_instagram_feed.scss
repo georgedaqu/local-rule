@@ -1,0 +1,149 @@
+section.instagram_feed{
+    div.container{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @media(max-width: 576px){
+            padding: 20px;
+        }
+        div.insta_images{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 16px;
+            @media(max-width: 1024px){
+                grid-template-columns: 1fr; 
+            }
+            a.insta_pic{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 3;
+                    transition: .6s;
+                }
+                &:hover{
+                    &::before{
+                        background-color: rgba($color-black, .4);
+                    }
+                }
+            }
+            div.left_images{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 150px;
+                gap: 16px;
+                @media(max-width: 1600px){
+                    grid-template-rows: 100px;
+                }
+                div.header_texts{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+
+                    grid-column: 1 / span 2;
+                    h3{
+                        a{
+                            @extend .instagram_username_text;
+                            cursor: pointer;
+                        }
+                    }
+                    p{
+                        @extend .instagram_username_text_desc;
+                        padding-bottom: 0;
+                    }
+                }
+                a{
+                    img{    
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &:nth-child(1){
+                        grid-row: 1 / span 2;
+                        @media(max-width: 1600px){
+                            grid-row: unset;
+                        }
+                    }
+                }
+                div.custom_images{ 
+                    display: grid;
+                    align-content: flex-start;
+                    @media(max-width: 1600px){
+                        align-content: unset;
+                    }
+                    gap: 16px;
+                    a{
+                        max-height: 250px;
+                        @media(max-width: 1600px){
+                            max-height: none;
+                        }
+                        img{    
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            div.right_images{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                @media(max-width: 1600px){
+                    margin-top: 116px;
+                }
+                @media(max-width: 1024px){
+                    margin-top: 0;
+                }
+                @media(max-width: 576px){
+                    grid-template-columns: 1fr;
+                }
+                a{
+                    max-height: 420px;
+                    &.large{
+                        max-height: none;
+                        grid-row: 1 / span 2;
+                        @media(max-width: 576){
+                            grid-row: unset;
+                        }
+                    }
+                    img{    
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// text styles
+.instagram_username_text{
+    font-size: var(--font-size-3xl);
+    line-height: 1.5;
+    font-weight: 500;
+    text-transform: capitalize;
+    @media(max-width: 576px){
+        font-size: var(--font-size-1-5xl);
+        line-height: 2;
+    }
+}
+
+.instagram_username_text_desc{
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    font-weight: 400;
+    text-transform: capitalize;
+    @media(max-width: 576px){
+        font-size: var(--font-size-md);
+    }
+}

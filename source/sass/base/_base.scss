@@ -1,0 +1,207 @@
+// Map
+div.map {
+	width: 100%;
+	height: 400px;
+	div.gm-style {
+		div {
+			position: static;
+		}
+	}
+}
+// Map
+// SVG Stroke ანიმაციისთვის
+svg.dashed {
+	fill: none;
+	path {
+		transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+	}
+	&:hover {
+		path {
+			stroke-dashoffset: 0 !important;
+		}
+	}
+}
+// SVG Stroke ანიმაციისთვის
+// Socials
+div.socials {
+	ul {
+		@extend .no-list;
+		display: flex;
+		li {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				@extend .flex;
+				width: 20px;
+				height: 20px;
+				color: $color-gray-700;
+				font-size: 15px;
+				&:hover {
+					color: $color-primary-200;
+				}
+			}
+		}
+	}
+}
+// Socials
+// Container
+div.container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 80px;
+	@media (max-width: 1680px) {
+		padding: 0 60px;
+	}
+	@media (max-width: 1440px) {
+		padding: 0 50px;
+	}
+	@media (max-width: 1366px) {
+		padding: 0 45px;
+	}
+	@media (max-width: 1280px) {
+		padding: 0 40px;
+	}
+	@media (max-width: 1024px) {
+		padding: 0 35px;
+	}
+	@media (max-width: 768px) {
+		padding: 0 20px;
+	}
+}
+.no-scroll {
+	overflow: hidden;
+}
+div.no_products {
+	padding: 40px;
+	text-align: center;
+	background-color: $color-gray-25;
+}
+.hidden_input {
+	display: none;
+}
+.woocommerce-message {
+	margin-bottom: 1em;
+	border-top-color: $color-primary-200;
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+	}
+	&:before {
+		color: $color-primary-200;
+		@media (max-width: 768px) {
+			position: relative;
+			left: auto;
+			top: auto;
+			margin-bottom: 5px;
+		}
+	}
+	a {
+		@media (max-width: 768px) {
+			order: 3;
+		}
+	}
+}
+div.container_basic {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 40px 0 60px;
+	@media (max-width: 576px) {
+		padding: 0;
+	}
+}
+div.account_related {
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: 7fr 3fr;
+	@media (max-width: 1440px) {
+		grid-template-columns: 1fr 320px;
+	}
+	@media (max-width: 768px) {
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+	}
+	div.account_related_content {
+		padding: 40px 0 60px;
+	}
+}
+div.size_chart {
+	display: flex;
+	div.size_column {
+		flex: 1;
+		font-size: var(--font-size-md);
+		@media (max-width: 768px) {
+			font-size: var(--font-size-sm);
+		}
+		div.size_head {
+			padding: 5px;
+			color: $color-white;
+			text-align: center;
+			white-space: nowrap;
+			background-color: $color-primary-200;
+			@media (max-width: 768px) {
+				font-size: var(--font-size-sm);
+			}
+		}
+		div.size_value {
+			padding: 5px;
+			text-align: center;
+			@media (max-width: 768px) {
+				font-size: var(--font-size-sm);
+			}
+			&:nth-child(odd) {
+				background-color: $color-gray-25;
+			}
+		}
+	}
+}
+div.not_found {
+	text-align: center;
+	padding: 40px 0;
+}
+.hidden_element {
+	display: none;
+}
+div.woocommerce-tabs {
+	width: 100%;
+}
+form.newsletter {
+	@extend .trans-all-4;
+	width: 60%;
+	@media (max-width: 1280px) {
+		width: 70%;
+	}
+	@media (max-width: 1024px) {
+		width: 80%;
+	}
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+	div.check {
+		display: flex;
+		gap: 10px;
+		align-items: flex-start;
+		margin-bottom: 20px;
+		label {
+			flex: 1;
+		}
+	}
+}
+div.form_note {
+	margin-top: 10px;
+}
+div.mc4wp-response {
+	padding-top: 10px;
+	color: $color-white;
+	text-align: center;
+}
+div.woocommerce-order {
+	padding: 40px 0;
+}
+div.form_item {
+	margin-bottom: 15px;
+}

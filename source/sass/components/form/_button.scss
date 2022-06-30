@@ -1,0 +1,102 @@
+button,
+input,
+a {
+	&.btn,
+	&.button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: var(--form-height);
+		padding: 5px var(--button-padding-x) 0 var(--button-padding-x);
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		border-radius: var(--form-border-radius);
+		outline-offset: var(--button-outline-offset);
+		cursor: pointer;
+		&:active {
+			outline: none;
+		}
+		&.small {
+			height: var(--form-height-smallest);
+			padding: 5px var(--button-padding-x-small) 0 var(--button-padding-x-small);
+			font-size: var(--font-size-xs);
+			font-weight: 300;
+			border-radius: var(--form-border-radius-small);
+		}
+		&.big {
+			height: var(--form-height-big);
+			padding: 5px var(--button-padding-x-big) 0 var(--button-padding-x-big);
+			font-size: var(--font-size-lg);
+			border-radius: var(--form-border-radius-big);
+		}
+		&.primary {
+			color: $color-white;
+			background-color: $color-primary-200;
+			&:hover {
+				background-color: $color-primary-100;
+			}
+			&:disabled {
+				color: $color-gray-200;
+				background-color: $color-gray-50;
+				cursor: default;
+				&:active {
+					outline: none;
+				}
+			}
+		}
+		&.light {
+			color: $color-primary-200;
+			background-color: transparent;
+			border: var(--form-border);
+			&:hover {
+				color: $color-white;
+				border: 1px solid $color-primary-100;
+				background-color: $color-primary-100;
+			}
+			&:disabled {
+				color: $color-gray-200;
+				background-color: $color-gray-50;
+				border-color: transparent;
+				cursor: default;
+				&:active {
+					outline: none;
+				}
+			}
+		}
+		&.transparent {
+			height: var(--form-height-big);
+			padding: 5px var(--button-padding-x) 0 var(--button-padding-x);
+			font-size: var(--font-size-lg);
+			border-radius: var(--form-border-radius-big);
+			border: 2px solid $color-white;
+			color: $color-white;
+			background-color: transparent;
+			&:hover {
+				border: 2px solid $color-primary-100;
+				background-color: $color-primary-100;
+			}
+			&:disabled {
+				color: $color-gray-200;
+				background-color: $color-gray-50;
+				border-color: $color-gray-100;
+				cursor: default;
+				&:active {
+					outline: none;
+				}
+			}
+		}
+		&.icon-left {
+			padding-left: var(--button-padding-alt);
+			em {
+				margin-right: var(--button-icon-margin);
+			}
+		}
+		&.icon-right {
+			padding-right: var(--button-padding-alt);
+			em {
+				margin-left: var(--button-icon-margin);
+			}
+		}
+	}
+}

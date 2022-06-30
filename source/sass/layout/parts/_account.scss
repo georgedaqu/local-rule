@@ -1,0 +1,343 @@
+main {
+	div.account_hero {
+		height: 450px;
+		margin-bottom: 100px;
+		@media (max-width: 1280px) {
+			margin-bottom: 80px;
+		}
+		@media (max-width: 1024px) {
+			margin-bottom: 60px;
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 40px;
+		}
+		@media (max-width: 576px) {
+			display: none;
+		}
+		figure {
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	div.container {
+		div.woocommerce {
+			div.woocommerce-notices-wrapper {
+				@extend .err_mesage_text;
+				width: 100%;
+				ul {
+					border: 2px solid #b81c23;
+				}
+			}
+			form.lost_reset_password {
+				max-width: 620px;
+				margin: 0 auto 40px auto;
+				@media (max-width: 768px) {
+					max-width: 420px;
+				}
+				@media (max-width: 768px) {
+					max-width: 420px;
+				}
+				p {
+					width: 100%;
+					font-size: var(--font-size-xl);
+					font-weight: 400;
+					line-height: 1.1;
+					color: $color-overlay;
+					label {
+						font-size: var(--font-size-sm);
+						font-weight: 400;
+						text-transform: capitalize;
+					}
+					input[type="text"] {
+						width: 100%;
+						padding: 18px 20px;
+						font-size: var(--font-size-lg);
+						font-weight: 300;
+						color: #0e0e0e;
+						background-color: #fcfcfc;
+						border: 1px solid $color-overlay2;
+						border-radius: 50px;
+					}
+					button[type="submit"] {
+						width: 100%;
+						font-size: var(--font-size-md);
+						font-weight: 400;
+						margin-top: 10px;
+						padding: 18px 0;
+						border-radius: 50px;
+						border: none;
+						text-transform: uppercase;
+						text-align: center;
+						transition: 0.5s;
+						color: $color-white;
+						background: $color-primary-200;
+						&:hover {
+							color: #fff;
+							background: #63937c;
+						}
+					}
+				}
+			}
+			div.woocommerce_container {
+				max-width: 1200px;
+				margin: 0 auto;
+				div.woocommerce-notices-wrapper {
+					@extend .err_mesage_text;
+					width: 100%;
+					ul {
+						border: 2px solid #b81c23;
+					}
+					margin-bottom: 40px;
+				}
+				div.u-columns {
+					@media (max-width: 1024px) {
+						display: flex;
+						flex-direction: column;
+						gap: 20px;
+						max-width: 650px;
+						margin: 0 auto;
+					}
+					&::before {
+						content: "";
+						position: absolute;
+						left: 50%;
+						top: 37px;
+						transform: translateX(-50%);
+						width: 104%;
+						height: 2px;
+						background: $color-primary-200;
+						opacity: 0.5;
+					}
+					@media (max-width: 1024px) {
+						&::before {
+							display: none;
+						}
+					}
+					@media (max-width: 576px) {
+						div.u-column2 {
+							display: none;
+						}
+					}
+
+					div.u-column1,
+					div.u-column2 {
+						@media (max-width: 1024px) {
+							width: 100%;
+						}
+						div.form_header {
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+							align-items: center;
+							h2 {
+								@extend .form_header;
+								width: fit-content;
+								margin-left: 20px;
+								margin-bottom: 40px;
+								&::before {
+									position: absolute;
+									content: "";
+									left: 50%;
+									bottom: -3px;
+									transform: translateX(-50%);
+									width: 100%;
+									height: 3px;
+									background: $color-secondary-200;
+								}
+								@media (max-width: 1024px) {
+									margin-bottom: 20px;
+									&::before {
+										display: none;
+									}
+								}
+								@media (max-width: 576px) {
+									margin-bottom: 0;
+								}
+							}
+							button.form_switcher {
+								display: none;
+								font-size: var(--font-size-sm);
+								font-weight: 400;
+								text-transform: capitalize;
+								border: none;
+								cursor: pointer;
+								@media (max-width: 576px) {
+									display: block;
+								}
+							}
+						}
+						form {
+							border: none;
+							padding: 0 20px;
+							@media (max-width: 576px) {
+								padding: 0;
+							}
+							label.inline {
+								display: flex;
+								justify-content: flex-start;
+								align-items: center;
+								width: fit-content;
+								margin-left: 20px;
+								font-size: var(--font-size-sm);
+								font-weight: 300;
+								color: #363636;
+								input[type="checkbox"] {
+									position: relative;
+									width: 16px;
+									height: 16px;
+									border: 2px solid $color-gray-400;
+									border-radius: 2px;
+									margin-right: 8px;
+									&:hover {
+										border: 2px solid $color-gray-200;
+									}
+									&:checked + span {
+										position: absolute;
+										top: 50%;
+										left: 8px;
+										transform: translate(-50%, -50%);
+										width: 16px;
+										height: 16px;
+										border-radius: 2px;
+										&::before {
+											position: absolute;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+											top: 50%;
+											left: 50%;
+											transform: translate(-50%, -50%);
+											width: 100%;
+											height: 100%;
+											font-family: "Font Awesome 6 Pro";
+											font-weight: 400;
+											content: "\f00c";
+											border-radius: 2px;
+											color: $color-white;
+											background-color: $color-primary-200;
+											z-index: 2;
+										}
+									}
+								}
+							}
+							p {
+								&.mailchimp-newsletter {
+									display: none;
+								}
+								label {
+									display: none;
+								}
+								input {
+									padding: 18px 20px;
+									font-size: var(--font-size-lg);
+									font-weight: 300;
+									color: #0e0e0e;
+									background-color: #fcfcfc;
+									border: 1px solid $color-overlay2;
+									border-radius: 50px;
+								}
+								span.password-input {
+									span.show-password-input {
+										display: none;
+									}
+									div.woocommerce-password-strength {
+										margin: 18px 0 10px 0;
+									}
+									small.woocommerce-password-hint {
+										margin-top: 0;
+										font-size: var(--font-size-md);
+										font-weight: 400;
+										line-height: 1.5;
+										color: $color-overlay;
+									}
+								}
+								button[type="submit"] {
+									width: 100%;
+									font-size: var(--font-size-md);
+									font-weight: 400;
+									margin-top: 10px;
+									padding: 18px 0;
+									border-radius: 50px;
+									border: none;
+									text-transform: uppercase;
+									text-align: center;
+									transition: 0.5s;
+									color: $color-white;
+									background: $color-primary-200;
+									&:hover {
+										color: #fff;
+										background: #63937c;
+									}
+								}
+								&.lost_password {
+									@media (max-width: 1024px) {
+										text-align: center;
+										a {
+											margin-left: 0;
+										}
+									}
+									a {
+										margin-left: 20px;
+										font-size: var(--font-size-md);
+										line-height: 1;
+										font-weight: 400;
+										color: $color-primary-200;
+									}
+								}
+								&.facebook {
+									a {
+										width: 100%;
+										font-size: var(--font-size-md);
+										font-weight: 400;
+										margin-top: 10px;
+										padding: 18px 0;
+										border-radius: 50px;
+										border: none;
+										text-transform: uppercase;
+										text-align: center;
+										transition: 0.5s;
+										color: $color-white;
+										background: $color-facebook;
+										&:hover {
+											color: #fff;
+											background: #63937c;
+										}
+									}
+								}
+							}
+						}
+					}
+					div.u-column2 {
+						form {
+							p {
+								button[type="submit"] {
+									margin-top: 44px;
+									@media (max-width: 1024px) {
+										margin-top: 10px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.form_header {
+	font-size: var(--font-size-1-2xl);
+	line-height: 1.5;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.err_mesage_text {
+	font-size: var(--font-size-lg);
+	font-weight: 400;
+	line-height: 1;
+}

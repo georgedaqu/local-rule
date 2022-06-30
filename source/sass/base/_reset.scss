@@ -1,0 +1,33 @@
+* {
+	all: unset;
+	display: revert;
+	box-sizing: border-box;
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+	position: relative;
+	* {
+		position: relative;
+	}
+}
+
+input[type="radio"],
+svg,
+path {
+	all: revert-layer;
+	margin: 0;
+}

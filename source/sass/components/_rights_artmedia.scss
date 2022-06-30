@@ -1,0 +1,26 @@
+div.rights {
+	margin-bottom: 20px;
+	color: $color-gray-200;
+	text-align: center;
+}
+div.artmedia {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	a {
+		svg {
+			width: 103px;
+			height: 20px;
+			path {
+				fill: $color-primary-200;
+			}
+		}
+		&:hover {
+			svg {
+				path {
+					fill: $color-primary-100;
+				}
+			}
+		}
+	}
+}
