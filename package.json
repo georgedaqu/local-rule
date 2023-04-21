@@ -13,12 +13,12 @@
 		]
 	},
 	"devDependencies": {
-		"@babel/core": "^7.18.2",
-		"@babel/preset-env": "^7.18.2",
-		"@babel/register": "^7.17.7",
-		"babel-loader": "^8.2.5",
-		"browser-sync": "^2.27.10",
-		"fs-extra": "^10.1.0",
+		"@babel/core": "^7.21.4",
+		"@babel/preset-env": "^7.21.4",
+		"@babel/register": "^7.21.0",
+		"babel-loader": "^9.1.2",
+		"browser-sync": "^2.29.1",
+		"fs-extra": "^11.1.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-clean-css": "^4.3.0",
@@ -27,20 +27,20 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-util": "^3.0.8",
 		"node-notifier": "^10.0.1",
-		"webpack": "^5.73.0"
+		"webpack": "^5.80.0"
 	},
 	"dependencies": {
-		"bourbon": "^7.2.0",
-		"cropperjs": "^1.5.12",
-		"fullcalendar": "^5.11.0",
-		"jquery": "^3.6.0",
-		"jquery-ui": "^1.13.1",
+		"bourbon": "^7.3.0",
+		"cropperjs": "^1.5.13",
+		"fullcalendar": "^6.1.5",
+		"jquery": "^3.6.4",
+		"jquery-ui": "^1.13.2",
 		"magnific-popup": "^1.1.0",
-		"moment": "^2.29.3",
-		"node-sass": "^7.0.1",
-		"npm-check-updates": "^13.1.3",
+		"moment": "^2.29.4",
+		"node-sass": "^8.0.0",
+		"npm-check-updates": "^16.10.9",
 		"select2": "^4.1.0-rc.0",
-		"simplebar": "^5.3.8",
+		"simplebar": "^6.2.5",
 		"slick-carousel": "^1.8.1"
 	}
 }
